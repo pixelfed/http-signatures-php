@@ -1,5 +1,5 @@
 {
-    "name": "99designs/http-signatures",
+    "name": "pixelfed/http-signatures",
     "description": "Sign and verify HTTP messages",
     "keywords": ["http", "https", "signing", "signed", "signature", "hmac"],
     "license": "MIT",

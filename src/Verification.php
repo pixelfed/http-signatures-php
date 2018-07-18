@@ -39,8 +39,7 @@ class Verification
     private function signatureMatches()
     {
         try {
-            $random = random_bytes(32);
-            return hash_hmac('sha256', $this->expectedSignatureBase64(), $random, true) === hash_hmac('sha256', $this->providedSignatureBase64(), $random, true);
+            return hash_equals($this->expectedSignatureBase64(), $this->providedSignatureBase64());
         } catch (SignatureParseException $e) {
             return false;
         } catch (KeyStoreException $e) {
