@@ -18,6 +18,9 @@ abstract class Algorithm
         case 'hmac-sha256':
             return new HmacAlgorithm('sha256');
             break;
+        case 'rsa-sha256':
+            return new RsaAlgorithm('sha256');
+            break;
         default:
             throw new Exception("No algorithm named '$name'");
             break;
