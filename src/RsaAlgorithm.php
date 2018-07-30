@@ -31,7 +31,7 @@ class RsaAlgorithm implements AlgorithmInterface
      */
     public function sign($key, $data)
     {
-        $alg = OPENSSL_ALGO_ . strtoupper($this->digestName);
+        $alg = OPENSSL_ALGO_SHA256;
         $pkey = openssl_pkey_get_private($key);
         $res = openssl_sign($data, $signature, $pkey, $alg);
         openssl_free_key($pkey);
