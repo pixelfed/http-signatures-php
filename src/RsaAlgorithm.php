@@ -35,6 +35,6 @@ class RsaAlgorithm implements AlgorithmInterface
         $pkey = openssl_pkey_get_private($key);
         $res = openssl_sign($data, $signature, $pkey, $alg);
         openssl_free_key($pkey);
-        return $res;
+        return $signature;
     }
 }
